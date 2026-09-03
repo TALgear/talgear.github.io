@@ -3,25 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tigers Apparel Lab | Custom Apparel, Team Stores & Fan Gear</title>
-  <meta name="description" content="Tigers Apparel Lab creates custom apparel, team stores, fan gear and lifestyle goods for clubs, schools, businesses and communities." />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>Tigers Apparel Lab | Custom Apparel, Fan Gear & Team Stores</title>
+  <meta name="description" content="Tigers Apparel Lab builds custom apparel, fan gear stores and team apparel programs for clubs, schools and businesses." />
+  <meta property="og:title" content="Tigers Apparel Lab" />
+  <meta property="og:description" content="Custom Apparel. Fan Gear. Team Stores. Built local." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talgear.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="announcement">NOW BUILDING CLUB STORES + CUSTOM APPAREL PROGRAMS FOR 2026</div>
+  <div class="announcement">CUSTOM APPAREL • FAN GEAR • TEAM STORES • TALGEAR.COM</div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Tigers Apparel Lab home">
-      <span class="brand-name">TIGERS APPAREL LAB</span>
+      <img class="brand-logo" src="assets/tal-logo.png" alt="TAL" onerror="this.style.display='none';document.querySelector('.brand-fallback').style.display='block'">
+      <span class="brand-fallback">TIGERS APPAREL LAB</span>
       <span class="brand-domain">TALGEAR.COM</span>
     </a>
-    <nav>
-      <a href="#services">What We Do</a>
-      <a href="#work">Built for Teams</a>
-      <a href="#about">Why TAL</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">MENU</button>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#fan-gear">Fan Gear</a>
+      <a href="#work">Work</a>
+      <a href="#why-tal">Why TAL</a>
       <a href="#contact" class="nav-cta">Start a Project</a>
     </nav>
   </header>
@@ -29,127 +37,228 @@
   <main id="top">
     <section class="hero">
       <div class="hero-content">
-        <p class="eyebrow">CUSTOM APPAREL • FAN GEAR • TEAM STORES</p>
-        <h1>YOUR LOGO.<br><span>YOUR PEOPLE.</span><br>GEAR THEY'LL WEAR.</h1>
-        <p class="hero-copy">TAL helps clubs, schools, teams and businesses turn their identity into apparel people actually want to own — without the big-box feel.</p>
+        <p class="eyebrow">TIGERS APPAREL LAB</p>
+        <h1>YOUR BRAND.<br><span>BETTER GEAR.</span><br>DONE RIGHT.</h1>
+        <p class="hero-copy">Custom apparel and curated fan gear programs for clubs, schools and businesses that want more than a logo dropped on a catalog item.</p>
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Start Your Project</a>
-          <a href="#services" class="btn btn-secondary">Explore TAL</a>
+          <a href="#fan-gear" class="btn btn-secondary">Build a Fan Gear Store</a>
         </div>
         <div class="hero-proof">
-          <span>LOCAL PRODUCTION</span><i></i><span>PREMIUM BLANKS</span><i></i><span>HANDS-ON SERVICE</span>
+          <span>LOCAL PRODUCTION</span><i></i><span>CURATED PRODUCTS</span><i></i><span>HANDS-ON SERVICE</span>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-card card-one">
-          <div class="mini-label">TEAM APPAREL</div>
-          <div class="jersey-shape"><span>YOUR<br>CLUB</span></div>
+
+      <div class="hero-board" aria-label="TAL capabilities">
+        <div class="board-topline"><span>TAL / APPAREL LAB</span><span>EST. LOCAL</span></div>
+        <div class="board-main">
+          <div class="board-word">TEAM</div>
+          <div class="board-word accent">FAN</div>
+          <div class="board-word">WORK</div>
         </div>
-        <div class="visual-card card-two">
-          <div class="mini-label">FAN GEAR</div>
-          <div class="shirt-shape"><span>BUILT<br>LOCAL.</span></div>
-        </div>
-        <div class="visual-card card-three">
-          <div class="mini-label">CLUB STORES</div>
-          <strong>ONE LINK.<br>YOUR BRAND.</strong>
-          <small>We handle the gear.</small>
+        <div class="board-footer">
+          <span>DTF</span><span>•</span><span>APPAREL</span><span>•</span><span>STORES</span><span>•</span><span>FULFILLMENT</span>
         </div>
       </div>
     </section>
 
-    <section class="intro-band">
+    <section class="positioning-strip">
       <p>NOT A CATALOG DUMP.</p>
-      <h2>A BETTER WAY TO BUILD YOUR APPAREL PROGRAM.</h2>
+      <h2>WE BUILD APPAREL PROGRAMS PEOPLE ACTUALLY WANT TO WEAR.</h2>
     </section>
 
     <section id="services" class="section services">
-      <div class="section-heading">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>Built around your brand.</h2>
-        <p>From a 50-shirt team order to a complete fan gear program, TAL builds the right solution around the people you serve.</p>
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>One apparel partner.<br>Multiple ways to work.</h2>
+        </div>
+        <p>Whether you need a single team order, a club-wide fan gear storefront or branded apparel for your business, TAL builds the program around your audience—not the other way around.</p>
       </div>
+
       <div class="service-grid">
         <article class="service-card featured">
           <span class="number">01</span>
           <h3>Fan Gear Stores</h3>
-          <p>Logo-forward online stores built for clubs, teams and organizations — curated instead of cluttered.</p>
-          <ul><li>Club-branded staples</li><li>Premium upgrade pieces</li><li>Easy ordering for families</li></ul>
+          <p>Club-logo-forward stores with a focused assortment families can understand and products they actually want.</p>
+          <a href="#fan-gear">Explore fan gear →</a>
         </article>
         <article class="service-card">
           <span class="number">02</span>
-          <h3>Team + School Apparel</h3>
-          <p>Training tees, spirit wear, staff gear, event shirts and program-wide apparel with consistent standards.</p>
+          <h3>Team + School Orders</h3>
+          <p>Training tees, spirit wear, staff gear, event shirts and program apparel with consistent production standards.</p>
         </article>
         <article class="service-card">
           <span class="number">03</span>
           <h3>Business Apparel</h3>
-          <p>Staff shirts, branded workwear, event gear and merchandise that feels more like a brand and less like a uniform.</p>
+          <p>Staff shirts, branded workwear, event apparel and merchandise that represents the business—not just the uniform.</p>
         </article>
         <article class="service-card">
           <span class="number">04</span>
-          <h3>Lifestyle Drops</h3>
-          <p>Small-batch TAL concepts inspired by baseball, weekends, road trips and the culture around the game.</p>
+          <h3>Custom Programs</h3>
+          <p>Sponsored-team programs, large runs, recurring orders and partner solutions built around real operational needs.</p>
         </article>
       </div>
     </section>
 
-    <section id="work" class="section dark-section">
-      <div class="section-heading light">
-        <p class="eyebrow">THE TAL APPROACH</p>
-        <h2>Club logo first.<br>Lifestyle when it adds value.</h2>
-        <p>For fan gear, your organization stays the hero. TAL adds better products, better presentation and selective lifestyle pieces that make the store feel complete.</p>
+    <section id="fan-gear" class="section fan-gear-section">
+      <div class="fan-copy">
+        <p class="eyebrow">TAL FAN GEAR</p>
+        <h2>Your logo stays the hero.</h2>
+        <p>Our fan gear model starts with the identity people already care about: yours. We build a clean core assortment around the club mark, then selectively add premium and lifestyle pieces where they make sense.</p>
+        <div class="feature-list">
+          <div><b>01</b><span><strong>Core essentials</strong>Tees, hoodies, hats and performance pieces.</span></div>
+          <div><b>02</b><span><strong>Premium upgrades</strong>Better blanks and elevated decoration options.</span></div>
+          <div><b>03</b><span><strong>Lifestyle layer</strong>Selective TAL-style pieces that expand the store.</span></div>
+          <div><b>04</b><span><strong>Simple storefront</strong>A focused shopping experience for families.</span></div>
+        </div>
+        <a href="#contact" class="text-link">Talk to TAL about your club →</a>
       </div>
-      <div class="approach-grid">
-        <div class="approach-item"><b>01</b><h3>Start with the mark</h3><p>We build around your club's identity, colors and audience.</p></div>
-        <div class="approach-item"><b>02</b><h3>Curate the assortment</h3><p>Core tees, hoodies, hats and performance pieces — not hundreds of random SKUs.</p></div>
-        <div class="approach-item"><b>03</b><h3>Add personality</h3><p>Selective lifestyle designs give fans more reasons to buy.</p></div>
-        <div class="approach-item"><b>04</b><h3>Make ordering easy</h3><p>A simple storefront or organized bulk-order process built around the job.</p></div>
+      <div class="fan-visual">
+        <div class="store-window">
+          <div class="store-bar"><span>YOUR CLUB FAN GEAR</span><span>SHOP</span></div>
+          <div class="product-grid">
+            <div class="product-tile dark"><div class="shirt-icon">CLUB</div><small>CORE TEE</small></div>
+            <div class="product-tile light"><div class="cap-icon">CLUB</div><small>HEADWEAR</small></div>
+            <div class="product-tile warm"><div class="hoodie-icon">CLUB</div><small>PREMIUM FLEECE</small></div>
+            <div class="product-tile orange"><div class="shirt-icon">LOCAL</div><small>LIFESTYLE DROP</small></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="about" class="section why-tal">
+    <section id="work" class="section work-section">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK + PROGRAMS</p>
+        <h2>Built for real organizations.</h2>
+        <p>Early TAL work already spans school teams, sponsored club programs and retail apparel—exactly the mix the brand is being built to serve.</p>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card royal">
+          <div class="work-label">TEAM + SCHOOL</div>
+          <div class="work-art"><span>LMS</span></div>
+          <div class="work-copy">
+            <h3>Lincoln Middle School Football</h3>
+            <p>Performance team apparel built around a straightforward, repeatable DTF production program.</p>
+          </div>
+        </article>
+        <article class="work-card black">
+          <div class="work-label">PARTNER PROGRAM</div>
+          <div class="work-art"><span>H&amp;F</span></div>
+          <div class="work-copy">
+            <h3>Sponsored Club Apparel</h3>
+            <p>A standardized preferred-partner model designed to support sponsored youth organizations at scale.</p>
+          </div>
+        </article>
+        <article class="work-card gold">
+          <div class="work-label">RETAIL + HOSPITALITY</div>
+          <div class="work-art"><span>GB</span></div>
+          <div class="work-copy">
+            <h3>Global Brew</h3>
+            <p>Seasonal retail apparel that blends the bar brand with football culture and wearable lifestyle design.</p>
+          </div>
+        </article>
+      </div>
+      <p class="work-note">Project marks shown above are text placeholders for portfolio layout only. Final site imagery should use approved client artwork and finished-product photography.</p>
+    </section>
+
+    <section id="why-tal" class="section why-tal">
       <div class="why-copy">
         <p class="eyebrow">WHY TAL</p>
-        <h2>Small enough to care.<br>Built to handle real programs.</h2>
-        <p>We're building TAL as the local alternative to faceless online decorators: responsive, flexible and close enough to understand the organizations we serve.</p>
+        <h2>Local service without the small-shop limitations.</h2>
+        <p>TAL is being built to combine hands-on local service with disciplined production, smart sourcing and modern storefront options.</p>
         <div class="metrics">
-          <div><strong>LOW</strong><span>barriers to getting started</span></div>
-          <div><strong>LOCAL</strong><span>production + problem solving</span></div>
-          <div><strong>CURATED</strong><span>products, not endless catalogs</span></div>
+          <div><strong>CURATED</strong><span>Product assortments that make sense.</span></div>
+          <div><strong>FLEXIBLE</strong><span>Bulk orders, stores and partner programs.</span></div>
+          <div><strong>RESPONSIVE</strong><span>A real person managing the project.</span></div>
         </div>
       </div>
       <div class="manifesto">
         <span>TAL / 001</span>
         <h3>BUILT HERE.<br>EARNED EVERY DAY.</h3>
-        <p>Apparel for teams, families, businesses and the people who show up.</p>
+        <p>Apparel for the teams, families, businesses and communities that show up.</p>
         <div class="rule"></div>
         <small>TIGERS APPAREL LAB • SOUTHERN ILLINOIS / ST. LOUIS METRO</small>
       </div>
     </section>
 
-    <section class="quote-strip">
-      <p>TEAM STORE. STAFF GEAR. FUNDRAISER. 2,000-SHIRT PROGRAM.</p>
-      <h2>BRING US THE IDEA. WE'LL BUILD THE APPAREL PLAN.</h2>
+    <section class="process-section">
+      <div class="process-head">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>Simple from idea to delivery.</h2>
+      </div>
+      <div class="process-grid">
+        <div><span>01</span><h3>Tell us the goal</h3><p>Team order, staff gear, fan store, fundraiser or large program.</p></div>
+        <div><span>02</span><h3>We build the plan</h3><p>Garments, decoration, quantities, store structure and pricing.</p></div>
+        <div><span>03</span><h3>Approve the artwork</h3><p>Production-ready files and clear decoration standards before we run.</p></div>
+        <div><span>04</span><h3>We produce + deliver</h3><p>Organized execution with the details managed end to end.</p></div>
+      </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <p class="eyebrow">LET'S BUILD SOMETHING</p>
-      <h2>Ready to put your logo on better gear?</h2>
-      <p>Tell us what you're working on. We'll help map out the right apparel, decoration and ordering approach.</p>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:sales@talgear.com?subject=TAL%20Project%20Inquiry">sales@talgear.com</a>
-        <a class="btn btn-secondary" href="https://talgear.com">TALGEAR.COM</a>
+    <section id="contact" class="section contact-section">
+      <div class="contact-intro">
+        <p class="eyebrow">START A PROJECT</p>
+        <h2>Bring us the logo.<br>We'll build the apparel plan.</h2>
+        <p>Give us the basics below. Submitting opens a pre-addressed email with your project details so you can send it directly to TAL.</p>
+        <div class="contact-direct">
+          <span>EMAIL</span>
+          <a href="mailto:sales@talgear.com">sales@talgear.com</a>
+          <span>WEB</span>
+          <a href="https://talgear.com">talgear.com</a>
+        </div>
       </div>
-      <p class="contact-note">Serving clubs, schools, teams and businesses across the St. Louis Metro and beyond.</p>
+
+      <form id="project-form" class="project-form">
+        <label>Organization / Business<input type="text" id="org" required placeholder="Your organization"></label>
+        <div class="form-row">
+          <label>Your Name<input type="text" id="name" required placeholder="Name"></label>
+          <label>Email<input type="email" id="email" required placeholder="you@example.com"></label>
+        </div>
+        <label>What are you looking for?
+          <select id="project-type">
+            <option>Fan Gear Store</option>
+            <option>Team / School Order</option>
+            <option>Business Apparel</option>
+            <option>Sponsored / Partner Program</option>
+            <option>Other Custom Apparel</option>
+          </select>
+        </label>
+        <label>Project Notes<textarea id="notes" rows="5" placeholder="Estimated quantity, deadline, garment ideas, colors, etc."></textarea></label>
+        <button type="submit" class="btn btn-primary form-button">Build My Inquiry Email</button>
+        <small>No data is stored on this website. The form opens your email app with the details filled in.</small>
+      </form>
     </section>
   </main>
 
   <footer>
-    <div>
-      <strong>TIGERS APPAREL LAB</strong>
-      <span>Custom Apparel • Fan Gear • Team Stores</span>
+    <div class="footer-brand">
+      <img src="assets/tal-logo.png" alt="TAL" onerror="this.style.display='none'">
+      <div><strong>TIGERS APPAREL LAB</strong><span>Custom Apparel • Fan Gear • Team Stores</span></div>
     </div>
-    <div class="footer-domain">TALGEAR.COM</div>
+    <div class="footer-right"><span>© 2026 TIGERS APPAREL LAB</span><b>TALGEAR.COM</b></div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    document.getElementById('project-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const org = document.getElementById('org').value.trim();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const type = document.getElementById('project-type').value;
+      const notes = document.getElementById('notes').value.trim();
+      const subject = encodeURIComponent(`TAL Project Inquiry — ${org}`);
+      const body = encodeURIComponent(`Organization / Business: ${org}\nName: ${name}\nEmail: ${email}\nProject Type: ${type}\n\nProject Notes:\n${notes || 'No additional notes provided.'}`);
+      window.location.href = `mailto:sales@talgear.com?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
