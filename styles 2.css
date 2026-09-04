@@ -181,3 +181,59 @@ footer{background:#090909;color:#fff;padding:42px 5vw;display:flex;justify-conte
   border:none !important;
   box-shadow:0 10px 26px rgba(11,11,11,.08) !important;
 }
+
+
+
+
+/* v4.7 — direct TAL Lifestyle layout fix */
+section.lifestyle-section{
+  overflow:hidden;
+}
+
+section.lifestyle-section .lifestyle-shell{
+  width:90% !important;
+  max-width:1380px !important;
+  margin:0 auto !important;
+  padding-left:0 !important;
+  padding-right:0 !important;
+  box-sizing:border-box !important;
+  display:grid !important;
+  grid-template-columns:minmax(280px, .8fr) minmax(0, 1.7fr) !important;
+  gap:48px !important;
+}
+
+section.lifestyle-section .lifestyle-copy,
+section.lifestyle-section .lifestyle-grid,
+section.lifestyle-section .lifestyle-card{
+  min-width:0 !important;
+}
+
+section.lifestyle-section .lifestyle-grid{
+  width:100% !important;
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0,1fr)) !important;
+  gap:20px !important;
+}
+
+section.lifestyle-section .lifestyle-placeholder{
+  width:100% !important;
+  box-sizing:border-box !important;
+}
+
+@media (max-width:1100px){
+  section.lifestyle-section .lifestyle-shell{
+    width:92% !important;
+    grid-template-columns:1fr !important;
+    gap:34px !important;
+  }
+}
+
+@media (max-width:760px){
+  section.lifestyle-section .lifestyle-shell{
+    width:calc(100% - 40px) !important;
+  }
+
+  section.lifestyle-section .lifestyle-grid{
+    grid-template-columns:1fr !important;
+  }
+}
