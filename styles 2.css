@@ -172,12 +172,12 @@ footer{background:#090909;color:#fff;padding:42px 5vw;display:flex;justify-conte
 }
 
 
-/* v4.3 — soften TAL Lifestyle borders */
+/* v4.4 — remove Lifestyle framing */
 .lifestyle-section{
-  border-top:1px solid rgba(11,11,11,.10);
-  border-bottom:1px solid rgba(11,11,11,.10);
+  border-top:none !important;
+  border-bottom:none !important;
 }
 .lifestyle-placeholder{
-  border:1px solid rgba(11,11,11,.18);
-  box-shadow:0 14px 34px rgba(11,11,11,.10);
+  border:none !important;
+  box-shadow:0 10px 26px rgba(11,11,11,.08) !important;
 }
