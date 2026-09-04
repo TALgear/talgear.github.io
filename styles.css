@@ -185,7 +185,9 @@ footer{background:#090909;color:#fff;padding:42px 5vw;display:flex;justify-conte
 
 
 
-/* v4.7 — direct TAL Lifestyle layout fix */
+
+
+/* v5.2 — TAL Lifestyle three-product collection */
 section.lifestyle-section{
   overflow:hidden;
 }
@@ -198,63 +200,47 @@ section.lifestyle-section .lifestyle-shell{
   padding-right:0 !important;
   box-sizing:border-box !important;
   display:grid !important;
-  grid-template-columns:minmax(280px, .8fr) minmax(0, 1.7fr) !important;
+  grid-template-columns:minmax(280px,.78fr) minmax(0,1.85fr) !important;
   gap:48px !important;
-}
-
-section.lifestyle-section .lifestyle-copy,
-section.lifestyle-section .lifestyle-grid,
-section.lifestyle-section .lifestyle-card{
-  min-width:0 !important;
 }
 
 section.lifestyle-section .lifestyle-grid{
   width:100% !important;
   display:grid !important;
-  grid-template-columns:repeat(3, minmax(0,1fr)) !important;
-  gap:20px !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:18px !important;
 }
 
-section.lifestyle-section .lifestyle-placeholder{
-  width:100% !important;
-  box-sizing:border-box !important;
+section.lifestyle-section .lifestyle-card{
+  min-width:0 !important;
 }
 
-@media (max-width:1100px){
-  section.lifestyle-section .lifestyle-shell{
-    width:92% !important;
-    grid-template-columns:1fr !important;
-    gap:34px !important;
-  }
-}
-
-@media (max-width:760px){
-  section.lifestyle-section .lifestyle-shell{
-    width:calc(100% - 40px) !important;
-  }
-
-  section.lifestyle-section .lifestyle-grid{
-    grid-template-columns:1fr !important;
-  }
-}
-
-
-/* v5 — first real TAL Lifestyle product */
-.lifestyle-product-image{
+section.lifestyle-section .lifestyle-product-image{
   position:relative;
-  width:100%;
-  aspect-ratio:4/5;
-  overflow:hidden;
+  width:100% !important;
+  height:360px !important;
+  overflow:hidden !important;
   background:#111;
   box-shadow:0 10px 26px rgba(11,11,11,.10);
 }
 
-.lifestyle-product-image img{
-  width:100%;
-  height:100%;
-  display:block;
-  object-fit:cover;
-  object-position:center;
+section.lifestyle-section .lifestyle-product-image img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:cover !important;
+}
+
+section.lifestyle-section .lifestyle-card:nth-child(1) .lifestyle-product-image img{
+  object-position:center 38% !important;
+}
+
+section.lifestyle-section .lifestyle-card:nth-child(2) .lifestyle-product-image img{
+  object-position:center 32% !important;
+}
+
+section.lifestyle-section .lifestyle-card:nth-child(3) .lifestyle-product-image img{
+  object-position:center 42% !important;
 }
 
 .lifestyle-product-number{
@@ -294,8 +280,29 @@ section.lifestyle-section .lifestyle-placeholder{
   letter-spacing:.14em;
 }
 
-@media (max-width:650px){
-  .lifestyle-product-image{
-    aspect-ratio:4/5;
+@media (max-width:1100px){
+  section.lifestyle-section .lifestyle-shell{
+    width:92% !important;
+    grid-template-columns:1fr !important;
+    gap:34px !important;
+  }
+
+  section.lifestyle-section .lifestyle-product-image{
+    height:420px !important;
+  }
+}
+
+@media (max-width:760px){
+  section.lifestyle-section .lifestyle-shell{
+    width:calc(100% - 40px) !important;
+  }
+
+  section.lifestyle-section .lifestyle-grid{
+    grid-template-columns:1fr !important;
+  }
+
+  section.lifestyle-section .lifestyle-product-image{
+    height:auto !important;
+    aspect-ratio:4/5 !important;
   }
 }
