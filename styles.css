@@ -45,3 +45,36 @@ footer{background:#090909;color:#fff;padding:42px 5vw;display:flex;justify-conte
 .client-proof i{width:4px;height:4px;border-radius:50%;background:var(--orange)}
 @media(max-width:1000px){.fan-store-cta{grid-template-columns:1fr;gap:28px}}
 @media(max-width:650px){.site-header{height:70px}.brand{gap:10px}.brand-logo{width:70px;height:26px}.brand-name{padding-left:10px}.brand-name strong{font-size:13px}.brand-name small{font-size:6px;letter-spacing:.1em}.trust-strip{justify-content:flex-start;overflow-x:auto;white-space:nowrap;padding-left:22px;padding-right:22px}.fan-store-cta{padding:52px 22px}.fan-store-cta h2{font-size:45px}}
+
+
+/* v4.1 — larger desktop brand lockup */
+@media (min-width:651px){
+  .site-header{
+    height:108px;
+    padding-left:5vw;
+    padding-right:5vw;
+  }
+  .brand{
+    gap:22px;
+  }
+  .brand-logo{
+    width:142px;
+    height:48px;
+  }
+  .brand-name{
+    padding-left:22px;
+    gap:5px;
+  }
+  .brand-name strong{
+    font-size:25px;
+    letter-spacing:.055em;
+  }
+  .brand-name small{
+    font-size:10px;
+    letter-spacing:.18em;
+  }
+  .nav-cta{
+    padding:16px 21px;
+    font-size:13px;
+  }
+}
