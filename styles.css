@@ -306,3 +306,32 @@ section.lifestyle-section .lifestyle-card:nth-child(3) .lifestyle-product-image 
     aspect-ratio:4/5 !important;
   }
 }
+
+
+/* v5.4 — fit Bills Mafia photo inside Fan Gear hero panel */
+.collage-main-bills{
+  overflow:hidden;
+}
+
+.collage-main-bills img{
+  width:100% !important;
+  height:100% !important;
+  display:block !important;
+  object-fit:cover !important;
+  object-position:center 24% !important;
+}
+
+/* Keep the existing collage panel proportions, but ensure a photo crop rather than a contained product mockup */
+.fan-gear-collage .collage-main-bills{
+  min-height:430px;
+}
+
+@media (max-width:900px){
+  .fan-gear-collage .collage-main-bills{
+    min-height:360px;
+  }
+
+  .collage-main-bills img{
+    object-position:center 24% !important;
+  }
+}
