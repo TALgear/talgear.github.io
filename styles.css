@@ -335,3 +335,198 @@ section.lifestyle-section .lifestyle-card:nth-child(3) .lifestyle-product-image 
     object-position:center 24% !important;
   }
 }
+
+
+/* v5.6 — From the Lab production proof section */
+.from-lab-section{
+  background:#f4f0e7;
+  color:#0b0b0b;
+  border-top:1px solid rgba(11,11,11,.12);
+  border-bottom:1px solid rgba(11,11,11,.12);
+}
+
+.from-lab-shell{
+  width:90%;
+  max-width:1380px;
+  margin:0 auto;
+  padding:78px 0 84px;
+  box-sizing:border-box;
+}
+
+.from-lab-header{
+  display:grid;
+  grid-template-columns:minmax(280px,.85fr) minmax(0,1.35fr);
+  column-gap:54px;
+  align-items:end;
+  margin-bottom:34px;
+}
+
+.from-lab-header .eyebrow{
+  grid-column:1 / -1;
+  margin-bottom:14px;
+}
+
+.from-lab-header h2{
+  margin:0;
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:clamp(44px,5vw,74px);
+  line-height:.92;
+  text-transform:uppercase;
+}
+
+.from-lab-header p{
+  margin:0 0 4px;
+  max-width:670px;
+  font-family:"Inter",sans-serif;
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(11,11,11,.72);
+}
+
+.from-lab-grid{
+  display:grid;
+  grid-template-columns:1.25fr 1fr 1fr;
+  gap:18px;
+  align-items:stretch;
+}
+
+.from-lab-card{
+  margin:0;
+  min-width:0;
+  background:#0f0f0f;
+  color:#f4f0e7;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.from-lab-card img{
+  width:100%;
+  height:355px;
+  display:block;
+  object-fit:cover;
+}
+
+.from-lab-card-large img{
+  object-position:center 50%;
+}
+
+.from-lab-card:nth-child(2) img{
+  object-position:center 46%;
+}
+
+.from-lab-card:nth-child(3) img{
+  object-position:center 52%;
+}
+
+.from-lab-card figcaption{
+  padding:18px 20px 20px;
+  min-height:138px;
+  box-sizing:border-box;
+}
+
+.from-lab-card figcaption span{
+  display:block;
+  margin-bottom:8px;
+  font-family:"Inter",sans-serif;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.15em;
+  color:#f04a24;
+}
+
+.from-lab-card figcaption strong{
+  display:block;
+  margin-bottom:7px;
+  font-family:"Barlow Condensed",sans-serif;
+  font-size:25px;
+  line-height:1;
+  text-transform:uppercase;
+}
+
+.from-lab-card figcaption p{
+  margin:0;
+  font-family:"Inter",sans-serif;
+  font-size:12px;
+  line-height:1.5;
+  color:rgba(244,240,231,.68);
+}
+
+@media (max-width:1000px){
+  .from-lab-header{
+    grid-template-columns:1fr;
+    row-gap:18px;
+  }
+
+  .from-lab-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .from-lab-card-large{
+    grid-column:1 / -1;
+  }
+
+  .from-lab-card-large img{
+    height:430px;
+  }
+}
+
+@media (max-width:700px){
+  .from-lab-shell{
+    width:calc(100% - 40px);
+    padding:58px 0 62px;
+  }
+
+  .from-lab-grid{
+    grid-template-columns:1fr;
+  }
+
+  .from-lab-card-large{
+    grid-column:auto;
+  }
+
+  .from-lab-card img,
+  .from-lab-card-large img{
+    height:auto;
+    aspect-ratio:4/3;
+  }
+}
+
+
+/* v5.11 — tighten From the Lab photo strip */
+.from-lab-card img{
+  height:265px !important;
+}
+
+.from-lab-card-large img{
+  height:265px !important;
+}
+
+.from-lab-card figcaption{
+  min-height:110px !important;
+  padding:14px 18px 16px !important;
+}
+
+.from-lab-card figcaption strong{
+  font-size:23px !important;
+}
+
+.from-lab-card figcaption p{
+  font-size:11px !important;
+  line-height:1.45 !important;
+}
+
+@media (max-width:1000px){
+  .from-lab-card img,
+  .from-lab-card-large img{
+    height:300px !important;
+  }
+}
+
+@media (max-width:700px){
+  .from-lab-card img,
+  .from-lab-card-large img{
+    height:auto !important;
+    aspect-ratio:4/3 !important;
+  }
+}
