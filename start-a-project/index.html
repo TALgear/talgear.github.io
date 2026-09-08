@@ -3,73 +3,449 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start a Project | Tigers Apparel Lab</title>
-  <meta name="description" content="Start a custom apparel, fan gear, team, school or business apparel project with Tigers Apparel Lab.">
+  <title>Start a Project | TAL — The Apparel Lab</title>
+  <meta name="description" content="Start a custom apparel, fan gear, team, school or business apparel project with TAL — The Apparel Lab.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="../assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    :root {
+      --black:#0b0b0b;
+      --cream:#f4f0e7;
+      --stone:#e8e1d6;
+      --orange:#f04a24;
+      --line:rgba(11,11,11,.16);
+      --muted:rgba(11,11,11,.64);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--cream);
+      color:var(--black);
+      font-family:"Inter",Arial,sans-serif;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{color:inherit}
+    img{max-width:100%;display:block}
+
+    .shell{
+      width:min(1380px,calc(100% - 64px));
+      margin:0 auto;
+    }
+
+    .site-header{
+      background:var(--cream);
+      border-bottom:1px solid var(--line);
+    }
+
+    .header-inner{
+      min-height:104px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:32px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      text-decoration:none;
+    }
+
+    .brand-logo{
+      width:132px;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .brand-divider{
+      width:1px;
+      height:48px;
+      background:rgba(11,11,11,.18);
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+
+    .brand-copy strong{
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:30px;
+      font-weight:800;
+      letter-spacing:.01em;
+    }
+
+    .brand-copy span{
+      margin-top:7px;
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.22em;
+      color:rgba(11,11,11,.55);
+      text-transform:uppercase;
+    }
+
+    .header-back{
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-decoration:none;
+      text-transform:uppercase;
+      border-bottom:1px solid var(--black);
+      padding-bottom:3px;
+    }
+
+    .hero{
+      background:var(--black);
+      color:var(--cream);
+      padding:84px 0 78px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);
+      gap:72px;
+      align-items:end;
+    }
+
+    .eyebrow{
+      display:block;
+      margin-bottom:16px;
+      color:var(--orange);
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+    }
+
+    h1,h2,h3,p{margin-top:0}
+    h1{
+      margin-bottom:22px;
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:clamp(70px,8vw,118px);
+      line-height:.84;
+      font-weight:800;
+      letter-spacing:-.02em;
+      text-transform:uppercase;
+    }
+
+    .hero-copy>p{
+      max-width:720px;
+      margin-bottom:0;
+      color:rgba(244,240,231,.7);
+      font-size:16px;
+      line-height:1.7;
+    }
+
+    .next-card{
+      border:1px solid rgba(244,240,231,.18);
+      padding:28px;
+    }
+
+    .next-card small{
+      display:block;
+      margin-bottom:14px;
+      color:var(--orange);
+      font-size:9px;
+      font-weight:800;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+    }
+
+    .next-card strong{
+      display:block;
+      margin-bottom:14px;
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:31px;
+      line-height:1.02;
+      font-weight:700;
+      text-transform:uppercase;
+    }
+
+    .next-card p{
+      margin-bottom:0;
+      color:rgba(244,240,231,.6);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .form-section{
+      padding:82px 0 96px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);
+      gap:72px;
+      align-items:start;
+    }
+
+    .form-intro{
+      position:sticky;
+      top:32px;
+    }
+
+    .form-intro h2{
+      margin-bottom:16px;
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:clamp(48px,5vw,72px);
+      line-height:.92;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+
+    .form-intro p{
+      max-width:390px;
+      margin-bottom:0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    form{
+      border-top:3px solid var(--black);
+      padding-top:26px;
+    }
+
+    .row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+
+    label{
+      display:block;
+    }
+
+    label>span{
+      display:block;
+      margin-bottom:8px;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    input,select,textarea{
+      display:block;
+      width:100%;
+      border:1px solid rgba(11,11,11,.22);
+      border-radius:0;
+      background:#fff;
+      color:var(--black);
+      padding:15px 14px;
+      font:500 14px/1.2 "Inter",Arial,sans-serif;
+      appearance:auto;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      outline:none;
+      border-color:var(--black);
+      box-shadow:0 0 0 1px var(--black);
+    }
+
+    textarea{
+      min-height:170px;
+      resize:vertical;
+      line-height:1.5;
+    }
+
+    .full{
+      margin-bottom:18px;
+    }
+
+    .art-note{
+      margin:26px 0 28px;
+      padding:18px 20px;
+      border-left:4px solid var(--orange);
+      background:var(--stone);
+    }
+
+    .art-note strong{
+      display:block;
+      margin-bottom:4px;
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:23px;
+      text-transform:uppercase;
+    }
+
+    .art-note p{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+
+    .submit-row{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    button{
+      border:0;
+      border-radius:0;
+      background:var(--black);
+      color:#fff;
+      padding:16px 22px;
+      font:800 11px/1 "Inter",Arial,sans-serif;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#222;
+    }
+
+    .direct-email{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .direct-email a{
+      color:var(--black);
+      font-weight:700;
+    }
+
+    .footer{
+      background:var(--black);
+      color:var(--cream);
+      padding:30px 0;
+    }
+
+    .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .footer strong{
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:22px;
+      text-transform:uppercase;
+    }
+
+    .footer span{
+      color:rgba(244,240,231,.52);
+      font-size:10px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .success{
+      padding:46px 0;
+    }
+
+    .success h2{
+      font-family:"Barlow Condensed",sans-serif;
+      font-size:64px;
+      line-height:.95;
+      text-transform:uppercase;
+    }
+
+    .success p{
+      max-width:620px;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .success a{
+      display:inline-block;
+      margin-top:8px;
+      background:var(--black);
+      color:#fff;
+      padding:16px 20px;
+      text-decoration:none;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    @media (max-width:900px){
+      .shell{width:min(100% - 40px,1380px)}
+      .header-inner{min-height:86px}
+      .brand-logo{width:105px}
+      .brand-copy strong{font-size:24px}
+      .hero-grid,.form-grid{grid-template-columns:1fr;gap:38px}
+      .form-intro{position:static}
+      .hero{padding:66px 0 60px}
+    }
+
+    @media (max-width:650px){
+      .brand-divider,.brand-copy{display:none}
+      .header-back{font-size:10px}
+      h1{font-size:64px}
+      .form-section{padding:56px 0 68px}
+      .row{grid-template-columns:1fr}
+      .next-card{padding:22px}
+      .footer-inner{align-items:flex-start;flex-direction:column}
+    }
+  </style>
 </head>
-<body class="project-page">
+
+<body>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand-lockup" href="../" aria-label="Tigers Apparel Lab home">
+    <div class="shell header-inner">
+      <a class="brand" href="../" aria-label="TAL — The Apparel Lab home">
         <img class="brand-logo" src="../assets/tal-logo.png" alt="TAL">
-        <div class="brand-divider"></div>
-        <div class="brand-copy">
-          <strong>TIGERS APPAREL LAB</strong>
-          <span>CUSTOM APPAREL + FAN GEAR</span>
-        </div>
+        <span class="brand-divider"></span>
+        <span class="brand-copy">
+          <strong>THE APPAREL LAB</strong>
+          <span>CUSTOM APPAREL • FAN GEAR • LIFESTYLE</span>
+        </span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="../#services">Services</a>
-        <a href="../#fan-gear">Fan Gear</a>
-        <a href="../#work">Work</a>
-        <a href="../#why-tal">Why TAL</a>
-      </nav>
+      <a class="header-back" href="../">Back to talgear.com</a>
     </div>
   </header>
 
   <main>
-    <section class="project-hero">
-      <div class="project-shell project-hero-grid">
-        <div class="project-intro">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
           <span class="eyebrow">START A PROJECT</span>
-          <h1>Tell us what<br>you’re building.</h1>
-          <p>Team order, fan gear store, business apparel or a custom program — give us the basics and TAL will help shape the right approach.</p>
+          <h1>Tell us what<br>you need.</h1>
+          <p>Team order, fan gear store, business apparel or a custom program — give us the starting point and TAL will help build the right plan.</p>
         </div>
 
-        <aside class="project-sidecard">
-          <span>WHAT HAPPENS NEXT</span>
-          <strong>We review the project, confirm the details and come back with the right next step.</strong>
-          <p>No bloated quote process. No generic catalog dump. Just a focused plan built around what you actually need.</p>
+        <aside class="next-card">
+          <small>WHAT HAPPENS NEXT</small>
+          <strong>We review it. Confirm the details. Build the right approach.</strong>
+          <p>No generic catalog dump. No bloated quote process. Just a focused plan built around your project.</p>
         </aside>
       </div>
     </section>
 
-    <section class="project-form-section">
-      <div class="project-shell project-form-grid">
-        <div class="project-form-heading">
+    <section class="form-section">
+      <div class="shell form-grid">
+        <div class="form-intro">
           <span class="eyebrow">PROJECT DETAILS</span>
           <h2>Give us the starting point.</h2>
           <p>Don’t have every answer yet? That’s fine. Send what you know and we’ll help with the rest.</p>
         </div>
 
-        <form class="tal-project-form"
-              action="https://api.web3forms.com/submit"
-              method="POST">
-
+        <form id="project-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="8bf89171-8e86-49d8-bbdc-9a513361ef2a">
           <input type="hidden" name="subject" value="New TAL Project Inquiry">
-          <input type="hidden" name="from_name" value="Tigers Apparel Lab Website">
+          <input type="hidden" name="from_name" value="TAL Website">
           <input type="hidden" name="redirect" value="https://talgear.com/start-a-project/?submitted=1">
 
-          <div class="form-row two-col">
+          <div class="row">
             <label>
               <span>Name *</span>
               <input type="text" name="name" required autocomplete="name">
@@ -80,7 +456,7 @@
             </label>
           </div>
 
-          <div class="form-row two-col">
+          <div class="row">
             <label>
               <span>Email *</span>
               <input type="email" name="email" required autocomplete="email">
@@ -91,7 +467,7 @@
             </label>
           </div>
 
-          <div class="form-row two-col">
+          <div class="row">
             <label>
               <span>Project Type *</span>
               <select name="project_type" required>
@@ -119,7 +495,7 @@
             </label>
           </div>
 
-          <div class="form-row two-col">
+          <div class="row">
             <label>
               <span>Target Date</span>
               <input type="date" name="target_date">
@@ -137,49 +513,47 @@
             </label>
           </div>
 
-          <label class="form-full">
+          <label class="full">
             <span>What are you looking to make?</span>
             <input type="text" name="garment_needs" placeholder="Tees, hoodies, hats, performance shirts, fan gear store, etc.">
           </label>
 
-          <label class="form-full">
+          <label class="full">
             <span>Tell us about the project *</span>
-            <textarea name="project_notes" rows="7" required placeholder="What are you trying to accomplish? Include any product ideas, colors, quantities, timing or other details that would help us understand the project."></textarea>
+            <textarea name="project_notes" required placeholder="What are you trying to accomplish? Include any product ideas, colors, quantities, timing or other details that would help us understand the project."></textarea>
           </label>
 
-          <div class="form-upload-note">
+          <div class="art-note">
             <strong>Have artwork ready?</strong>
-            <p>After you submit, you can reply to the confirmation email with your logo or artwork files. We’ll add direct file upload once the form backend is finalized.</p>
+            <p>Submit the form first, then reply to the confirmation email with your logo or artwork files.</p>
           </div>
 
-          <button type="submit" class="button button-dark project-submit">SEND PROJECT →</button>
-
-          <p class="form-direct-email">Prefer email? <a href="mailto:ryan@talgear.com">ryan@talgear.com</a></p>
+          <div class="submit-row">
+            <button type="submit">SEND PROJECT DETAILS →</button>
+            <p class="direct-email">Prefer email? <a href="mailto:ryan@talgear.com">ryan@talgear.com</a></p>
+          </div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div>
-        <strong>TIGERS APPAREL LAB</strong>
-        <span>Southern Illinois / St. Louis Metro</span>
-      </div>
-      <a href="../">talgear.com</a>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <strong>TAL — THE APPAREL LAB</strong>
+      <span>CUSTOM APPAREL • FAN GEAR • LIFESTYLE</span>
     </div>
   </footer>
 
   <script>
     if (new URLSearchParams(window.location.search).get('submitted') === '1') {
-      const form = document.querySelector('.tal-project-form');
+      const form = document.getElementById('project-form');
       if (form) {
         form.innerHTML = `
-          <div class="project-success">
+          <div class="success">
             <span class="eyebrow">PROJECT RECEIVED</span>
             <h2>Thanks. We’ve got it.</h2>
-            <p>Your project details were submitted to TAL. We’ll review the information and follow up with the right next step.</p>
-            <a class="button button-dark" href="../">BACK TO TALGEAR.COM</a>
+            <p>Your project details were submitted to TAL. We’ll review everything and follow up with the right next step.</p>
+            <a href="../">Back to talgear.com</a>
           </div>
         `;
       }
