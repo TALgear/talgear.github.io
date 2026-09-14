@@ -530,3 +530,114 @@ section.lifestyle-section .lifestyle-card:nth-child(3) .lifestyle-product-image 
     aspect-ratio:4/3 !important;
   }
 }
+
+
+/* v6 — TAL-first homepage restructure */
+.hero-showcase img{
+  object-position:center 34% !important;
+}
+
+.hero-showcase .photo-tag{
+  background:rgba(11,11,11,.90);
+}
+
+.lifestyle-section{
+  scroll-margin-top:90px;
+}
+
+#services,
+#fan-gear,
+#work,
+#why-tal{
+  scroll-margin-top:90px;
+}
+
+/* With Lifestyle moved near the top, give it breathing room and a stronger editorial presence. */
+section.lifestyle-section .lifestyle-shell{
+  padding-top:72px !important;
+  padding-bottom:76px !important;
+}
+
+section.lifestyle-section .lifestyle-copy h2{
+  margin-top:10px;
+}
+
+/* Final CTA replaces the old homepage email-builder form. */
+.final-cta{
+  background:#0b0b0b;
+  color:#f4f0e7;
+  padding:76px 5vw;
+  display:grid;
+  grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);
+  gap:7vw;
+  align-items:end;
+}
+
+.final-cta h2{
+  margin:0 0 18px;
+  font:800 clamp(52px,6vw,86px)/.88 "Barlow Condensed",sans-serif;
+  letter-spacing:-.025em;
+  text-transform:uppercase;
+}
+
+.final-cta-copy > p:last-child{
+  max-width:720px;
+  margin:0;
+  color:rgba(244,240,231,.65);
+  font-size:15px;
+  line-height:1.65;
+}
+
+.final-cta-action{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+}
+
+.final-cta-action .btn-primary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:210px;
+}
+
+.final-cta-action span{
+  font-size:11px;
+  color:rgba(244,240,231,.55);
+}
+
+.final-cta-action span a{
+  color:#f4f0e7;
+  font-weight:700;
+}
+
+/* Keep TAL Lifestyle product imagery balanced now that it appears early. */
+section.lifestyle-section .lifestyle-product-image{
+  height:340px !important;
+}
+
+@media (max-width:1100px){
+  section.lifestyle-section .lifestyle-product-image{
+    height:390px !important;
+  }
+}
+
+@media (max-width:900px){
+  .final-cta{
+    grid-template-columns:1fr;
+    gap:34px;
+    padding:62px 5vw;
+  }
+}
+
+@media (max-width:760px){
+  section.lifestyle-section .lifestyle-shell{
+    padding-top:54px !important;
+    padding-bottom:58px !important;
+  }
+
+  section.lifestyle-section .lifestyle-product-image{
+    height:auto !important;
+  }
+}
