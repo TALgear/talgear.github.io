@@ -1,563 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start a Project | TAL — Team Apparel Lab</title>
-  <meta name="description" content="Start a custom apparel, fan gear, team, school or business apparel project with TAL — Team Apparel Lab.">
-  <meta name="theme-color" content="#0b0b0b">
-  <link rel="icon" href="../assets/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <title>TAL | Team Apparel Lab — Custom Apparel, Fan Gear & Lifestyle</title>
+  <meta name="description" content="TAL — Team Apparel Lab builds custom apparel, fan gear stores, team programs and lifestyle apparel for teams, schools, businesses, clubs and organizations." />
+  <meta property="og:title" content="TAL | Team Apparel Lab" />
+  <meta property="og:description" content="Custom Apparel. Fan Gear. Lifestyle. Built local." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talgear.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --black:#0b0b0b;
-      --cream:#f4f0e7;
-      --stone:#e8e1d6;
-      --orange:#f04a24;
-      --line:rgba(11,11,11,.16);
-      --muted:rgba(11,11,11,.64);
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      background:var(--cream);
-      color:var(--black);
-      font-family:"Inter",Arial,sans-serif;
-      -webkit-font-smoothing:antialiased;
-    }
-
-    a{color:inherit}
-    img{max-width:100%;display:block}
-
-    .shell{
-      width:min(1380px,calc(100% - 64px));
-      margin:0 auto;
-    }
-
-    .site-header{
-      background:var(--cream);
-      border-bottom:1px solid var(--line);
-    }
-
-    .header-inner{
-      min-height:104px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:32px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:22px;
-      text-decoration:none;
-    }
-
-    .brand-logo{
-      width:132px;
-      height:auto;
-      object-fit:contain;
-    }
-
-    .brand-divider{
-      width:1px;
-      height:48px;
-      background:rgba(11,11,11,.18);
-    }
-
-    .brand-copy{
-      display:flex;
-      flex-direction:column;
-      line-height:1;
-    }
-
-    .brand-copy strong{
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:30px;
-      font-weight:800;
-      letter-spacing:.01em;
-    }
-
-    .brand-copy span{
-      margin-top:7px;
-      font-size:10px;
-      font-weight:700;
-      letter-spacing:.22em;
-      color:rgba(11,11,11,.55);
-      text-transform:uppercase;
-    }
-
-    .header-back{
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-decoration:none;
-      text-transform:uppercase;
-      border-bottom:1px solid var(--black);
-      padding-bottom:3px;
-    }
-
-    .hero{
-      background:var(--black);
-      color:var(--cream);
-      padding:84px 0 78px;
-    }
-
-    .hero-grid{
-      display:grid;
-      grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);
-      gap:72px;
-      align-items:end;
-    }
-
-    .eyebrow{
-      display:block;
-      margin-bottom:16px;
-      color:var(--orange);
-      font-size:10px;
-      font-weight:800;
-      letter-spacing:.2em;
-      text-transform:uppercase;
-    }
-
-    h1,h2,h3,p{margin-top:0}
-    h1{
-      margin-bottom:22px;
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:clamp(70px,8vw,118px);
-      line-height:.84;
-      font-weight:800;
-      letter-spacing:-.02em;
-      text-transform:uppercase;
-    }
-
-    .hero-copy>p{
-      max-width:720px;
-      margin-bottom:0;
-      color:rgba(244,240,231,.7);
-      font-size:16px;
-      line-height:1.7;
-    }
-
-    .next-card{
-      border:1px solid rgba(244,240,231,.18);
-      padding:28px;
-    }
-
-    .next-card small{
-      display:block;
-      margin-bottom:14px;
-      color:var(--orange);
-      font-size:9px;
-      font-weight:800;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-    }
-
-    .next-card strong{
-      display:block;
-      margin-bottom:14px;
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:31px;
-      line-height:1.02;
-      font-weight:700;
-      text-transform:uppercase;
-    }
-
-    .next-card p{
-      margin-bottom:0;
-      color:rgba(244,240,231,.6);
-      font-size:12px;
-      line-height:1.6;
-    }
-
-    .form-section{
-      padding:82px 0 96px;
-    }
-
-    .form-grid{
-      display:grid;
-      grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);
-      gap:72px;
-      align-items:start;
-    }
-
-    .form-intro{
-      position:sticky;
-      top:32px;
-    }
-
-    .form-intro h2{
-      margin-bottom:16px;
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:clamp(48px,5vw,72px);
-      line-height:.92;
-      font-weight:800;
-      text-transform:uppercase;
-    }
-
-    .form-intro p{
-      max-width:390px;
-      margin-bottom:0;
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
-    }
-
-    form{
-      border-top:3px solid var(--black);
-      padding-top:26px;
-    }
-
-    .row{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-      margin-bottom:18px;
-    }
-
-    label{
-      display:block;
-    }
-
-    label>span{
-      display:block;
-      margin-bottom:8px;
-      font-size:10px;
-      font-weight:800;
-      letter-spacing:.11em;
-      text-transform:uppercase;
-    }
-
-    input,select,textarea{
-      display:block;
-      width:100%;
-      border:1px solid rgba(11,11,11,.22);
-      border-radius:0;
-      background:#fff;
-      color:var(--black);
-      padding:15px 14px;
-      font:500 14px/1.2 "Inter",Arial,sans-serif;
-      appearance:auto;
-    }
-
-    input:focus,select:focus,textarea:focus{
-      outline:none;
-      border-color:var(--black);
-      box-shadow:0 0 0 1px var(--black);
-    }
-
-    textarea{
-      min-height:170px;
-      resize:vertical;
-      line-height:1.5;
-    }
-
-    .full{
-      margin-bottom:18px;
-    }
-
-    .art-note{
-      margin:26px 0 28px;
-      padding:18px 20px;
-      border-left:4px solid var(--orange);
-      background:var(--stone);
-    }
-
-    .art-note strong{
-      display:block;
-      margin-bottom:4px;
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:23px;
-      text-transform:uppercase;
-    }
-
-    .art-note p{
-      margin:0;
-      color:var(--muted);
-      font-size:12px;
-      line-height:1.6;
-    }
-
-    .submit-row{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    button{
-      border:0;
-      border-radius:0;
-      background:var(--black);
-      color:#fff;
-      padding:16px 22px;
-      font:800 11px/1 "Inter",Arial,sans-serif;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      cursor:pointer;
-    }
-
-    button:hover{
-      background:#222;
-    }
-
-    .direct-email{
-      margin:0;
-      color:var(--muted);
-      font-size:12px;
-    }
-
-    .direct-email a{
-      color:var(--black);
-      font-weight:700;
-    }
-
-    .footer{
-      background:var(--black);
-      color:var(--cream);
-      padding:30px 0;
-    }
-
-    .footer-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:24px;
-    }
-
-    .footer strong{
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:22px;
-      text-transform:uppercase;
-    }
-
-    .footer span{
-      color:rgba(244,240,231,.52);
-      font-size:10px;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .success{
-      padding:46px 0;
-    }
-
-    .success h2{
-      font-family:"Barlow Condensed",sans-serif;
-      font-size:64px;
-      line-height:.95;
-      text-transform:uppercase;
-    }
-
-    .success p{
-      max-width:620px;
-      color:var(--muted);
-      line-height:1.7;
-    }
-
-    .success a{
-      display:inline-block;
-      margin-top:8px;
-      background:var(--black);
-      color:#fff;
-      padding:16px 20px;
-      text-decoration:none;
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-    }
-
-    @media (max-width:900px){
-      .shell{width:min(100% - 40px,1380px)}
-      .header-inner{min-height:86px}
-      .brand-logo{width:105px}
-      .brand-copy strong{font-size:24px}
-      .hero-grid,.form-grid{grid-template-columns:1fr;gap:38px}
-      .form-intro{position:static}
-      .hero{padding:66px 0 60px}
-    }
-
-    @media (max-width:650px){
-      .brand-divider,.brand-copy{display:none}
-      .header-back{font-size:10px}
-      h1{font-size:64px}
-      .form-section{padding:56px 0 68px}
-      .row{grid-template-columns:1fr}
-      .next-card{padding:22px}
-      .footer-inner{align-items:flex-start;flex-direction:column}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
-
 <body>
+  <div class="announcement">CUSTOM APPAREL • FAN GEAR • TAL LIFESTYLE</div>
+
   <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="../" aria-label="TAL — Team Apparel Lab home">
-        <img class="brand-logo" src="../assets/tal-logo.png" alt="TAL">
-        <span class="brand-divider"></span>
-        <span class="brand-copy">
-          <strong>TEAM APPAREL LAB</strong>
-          <span>CUSTOM APPAREL • FAN GEAR • LIFESTYLE</span>
-        </span>
-      </a>
-      <a class="header-back" href="../">Back to talgear.com</a>
-    </div>
+    <a class="brand" href="#top" aria-label="TAL — Team Apparel Lab home">
+      <img class="brand-logo" src="assets/tal-logo.png" alt="TAL" onerror="this.style.display='none';document.querySelector('.brand-fallback').style.display='block'">
+      <span class="brand-fallback">TAL</span>
+      <span class="brand-name"><strong>TEAM APPAREL LAB</strong><small>CUSTOM APPAREL • FAN GEAR • LIFESTYLE</small></span>
+    </a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">MENU</button>
+    <nav class="nav-links">
+      <a href="#lifestyle">Lifestyle</a>
+      <a href="#services">Services</a>
+      <a href="#fan-gear">Fan Gear</a>
+      <a href="#work">Work</a>
+      <a href="#why-tal">Why TAL</a>
+      <a href="start-a-project/" class="nav-cta">Start a Project</a>
+    </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">START A PROJECT</span>
-          <h1>Tell us what<br>you need.</h1>
-          <p>Team order, fan gear store, business apparel or a custom program — give us the starting point and TAL will help build the right plan.</p>
+      <div class="hero-content">
+        <p class="eyebrow">TAL / TEAM APPAREL LAB</p>
+        <h1>YOUR BRAND.<br><span>BETTER GEAR.</span><br>DONE RIGHT.</h1>
+        <p class="hero-copy">Custom apparel, fan gear and lifestyle pieces built for clubs, schools, businesses and people who care what they wear.</p>
+        <div class="hero-actions">
+          <a href="start-a-project/" class="btn btn-primary">Start Your Project</a>
+          <a href="#lifestyle" class="btn btn-secondary">Explore TAL Lifestyle</a>
         </div>
+        <div class="hero-proof">
+          <span>LOCAL PRODUCTION</span><i></i><span>CURATED PRODUCTS</span><i></i><span>HANDS-ON SERVICE</span>
+        </div>
+      </div>
 
-        <aside class="next-card">
-          <small>WHAT HAPPENS NEXT</small>
-          <strong>We review it. Confirm the details. Build the right approach.</strong>
-          <p>No generic catalog dump. No bloated quote process. Just a focused plan built around your project.</p>
-        </aside>
+      <div class="hero-photo hero-showcase" aria-label="TAL Lifestyle Barrels Greater Than Excuses shirt">
+        <img src="assets/tal-showcase-barrels-excuses.png" alt="TAL Barrels Greater Than Excuses lifestyle shirt at a baseball field" />
+        <div class="photo-tag"><span>TAL LIFESTYLE</span><strong>BARRELS &gt; EXCUSES</strong></div>
       </div>
     </section>
 
-    <section class="form-section">
-      <div class="shell form-grid">
-        <div class="form-intro">
-          <span class="eyebrow">PROJECT DETAILS</span>
-          <h2>Give us the starting point.</h2>
-          <p>Don’t have every answer yet? That’s fine. Send what you know and we’ll help with the rest.</p>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  
+
+
+    
+
+    
+
+    
+  
+  
+
+  <section class="trust-strip" aria-label="TAL capabilities">
+      <span>LOCAL PRODUCTION</span><i></i><span>CLUB STORES</span><i></i><span>TEAM ORDERS</span><i></i><span>BUSINESS APPAREL</span><i></i><span>PARTNER PROGRAMS</span>
+    </section>
+
+<section class="lifestyle-section" id="lifestyle">
+    <div class="section-shell lifestyle-shell">
+      <div class="lifestyle-copy">
+        <span class="eyebrow">TAL LIFESTYLE</span>
+        <h2>Baseball culture.<br>Built for everywhere else.</h2>
+        <p>TAL originals designed for game days, restaurants, weekends and everywhere in between.</p>
+        <a class="button button-dark button-disabled" href="#" aria-disabled="true">SHOP TAL — COMING SOON</a>
+      </div>
+
+      <div class="lifestyle-grid" aria-label="TAL Lifestyle collection preview">
+        <article class="lifestyle-card lifestyle-product-card">
+          <div class="lifestyle-product-image">
+            <img src="assets/caught-looking-lifestyle.png" alt="Caught Looking TAL lifestyle tee">
+            <span class="lifestyle-product-number">01</span>
+          </div>
+          <div class="lifestyle-product-meta">
+            <strong>CAUGHT LOOKING</strong>
+            <span>COMING SOON</span>
+          </div>
+          <p>Vintage baseball typography with a contrasting backwards K. Built for game days and everything after.</p>
+        </article>
+
+        <article class="lifestyle-card lifestyle-product-card">
+          <div class="lifestyle-product-image">
+            <img src="assets/baseball-weather-hoodie.png" alt="Baseball Weather TAL hoodie">
+            <span class="lifestyle-product-number">02</span>
+          </div>
+          <div class="lifestyle-product-meta">
+            <strong>BASEBALL WEATHER</strong>
+            <span>COMING SOON</span>
+          </div>
+          <p>A clean statement hoodie for cool mornings, late innings and everyday wear.</p>
+        </article>
+
+        <article class="lifestyle-card lifestyle-product-card">
+          <div class="lifestyle-product-image">
+            <img src="assets/barrels-excuses-lifestyle.png" alt="Barrels Greater Than Excuses TAL lifestyle tee">
+            <span class="lifestyle-product-number">03</span>
+          </div>
+          <div class="lifestyle-product-meta">
+            <strong>BARRELS &gt; EXCUSES</strong>
+            <span>COMING SOON</span>
+          </div>
+          <p>Vintage baseball mindset graphic on a midnight navy tee. Built for the field, stands and everywhere after.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<section id="services" class="section services">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>One apparel partner.<br>Multiple ways to work.</h2>
         </div>
+        <p>Whether you need a single team order, a club-wide fan gear storefront or branded apparel for your business, TAL builds the program around your audience—not the other way around.</p>
+      </div>
 
-        <form id="project-form" action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="8bf89171-8e86-49d8-bbdc-9a513361ef2a">
-          <input type="hidden" name="subject" value="New TAL Project Inquiry">
-          <input type="hidden" name="from_name" value="TAL Website">
-          <input type="hidden" name="redirect" value="https://talgear.com/start-a-project/?submitted=1">
+      <div class="service-grid">
+        <article class="service-card featured">
+          <span class="number">01</span>
+          <h3>Fan Gear Stores</h3>
+          <p>Club-logo-forward stores with a focused assortment families can understand and products they actually want.</p>
+          <a href="#fan-gear">Explore fan gear →</a>
+        </article>
+        <article class="service-card">
+          <span class="number">02</span>
+          <h3>Team + School Orders</h3>
+          <p>Training tees, spirit wear, staff gear, event shirts and program apparel with consistent production standards.</p>
+        </article>
+        <article class="service-card">
+          <span class="number">03</span>
+          <h3>Business Apparel</h3>
+          <p>Staff shirts, branded workwear, event apparel and merchandise that represents the business—not just the uniform.</p>
+        </article>
+        <article class="service-card">
+          <span class="number">04</span>
+          <h3>Custom Programs</h3>
+          <p>Sponsored-team programs, large runs, recurring orders and partner solutions built around real operational needs.</p>
+        </article>
+      </div>
+    </section>
 
-          <div class="row">
-            <label>
-              <span>Name *</span>
-              <input type="text" name="name" required autocomplete="name">
-            </label>
-            <label>
-              <span>Organization / Business</span>
-              <input type="text" name="organization" autocomplete="organization">
-            </label>
-          </div>
+<section id="fan-gear" class="section fan-gear-section">
+      <div class="fan-copy">
+        <p class="eyebrow">TAL FAN GEAR</p>
+        <h2>Your logo stays the hero.</h2>
+        <p>Our fan gear model starts with the identity people already care about: yours. We build a clean core assortment around the club mark, then selectively add premium and lifestyle pieces where they make sense.</p>
+        <div class="feature-list">
+          <div><b>01</b><span><strong>Core essentials</strong>Tees, hoodies, hats and performance pieces.</span></div>
+          <div><b>02</b><span><strong>Premium upgrades</strong>Better blanks and elevated decoration options.</span></div>
+          <div><b>03</b><span><strong>Lifestyle layer</strong>Selective TAL-style pieces that expand the store.</span></div>
+          <div><b>04</b><span><strong>Simple storefront</strong>A focused shopping experience for families.</span></div>
+        </div>
+        <a href="#contact" class="text-link">Talk to TAL about your club →</a>
+      </div>
+      <div class="fan-visual photo-collage">
+        <figure class="collage-main collage-main-bills"><img src="assets/global-brew-bills-mafia.png" alt="Global Brew Bills Mafia lifestyle shirt" /><figcaption>RETAIL + FAN CULTURE / GLOBAL BREW</figcaption></figure>
+        <figure class="collage-small"><img src="assets/global-brew-daaaa-beers.png" alt="Global Brew Chicago Daaaa Beers retail shirt" /><figcaption>LIFESTYLE + RETAIL</figcaption></figure>
+      </div>
+    </section>
 
-          <div class="row">
-            <label>
-              <span>Email *</span>
-              <input type="email" name="email" required autocomplete="email">
-            </label>
-            <label>
-              <span>Phone</span>
-              <input type="tel" name="phone" autocomplete="tel">
-            </label>
-          </div>
+<section id="work" class="section work-section">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK + PROGRAMS</p>
+        <h2>Built for real organizations.</h2>
+        <p>Early TAL work already spans school teams, sponsored club programs and retail apparel—exactly the mix the brand is being built to serve.</p>
+        <div class="client-proof">SCHOOL TEAMS <i></i> YOUTH CLUBS <i></i> LOCAL BUSINESSES <i></i> SPONSORED PROGRAMS</div>
+      </div>
 
-          <div class="row">
-            <label>
-              <span>Project Type *</span>
-              <select name="project_type" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Team / School Apparel</option>
-                <option>Fan Gear Store</option>
-                <option>Business Apparel</option>
-                <option>Custom Program</option>
-                <option>TAL Lifestyle / Wholesale</option>
-                <option>Other</option>
-              </select>
-            </label>
+      <div class="work-grid photo-work-grid">
+        <article class="work-card photo-card">
+          <img src="assets/lincoln-football-shirt.png" alt="Lincoln Wildcats Football shirt" />
+          <div class="work-copy"><span class="project-type">TEAM + SCHOOL</span><h3>Lincoln Middle School Football</h3><p>Performance apparel designed around the school mark and produced as a clean, repeatable team order.</p></div>
+        </article>
+        <article class="work-card photo-card">
+          <img src="assets/lincoln-baseball-shirt.png" alt="Lincoln Wildcats Baseball shirt" />
+          <div class="work-copy"><span class="project-type">TEAM + SCHOOL</span><h3>Lincoln Wildcats Baseball</h3><p>Club-logo-forward performance apparel with a simple athletic presentation built for players and families.</p></div>
+        </article>
+        <article class="work-card photo-card landscape-card">
+          <img src="assets/global-brew-sundays.png" alt="Global Brew Sundays on Tap retail apparel" />
+          <div class="work-copy"><span class="project-type">RETAIL + HOSPITALITY</span><h3>Global Brew — Sundays on Tap</h3><p>Game-day retail apparel that turns the bar's personality into merchandise customers want to wear.</p></div>
+        </article>
+        <article class="work-card photo-card landscape-card">
+          <img src="assets/global-brew-daaaa-beers.png" alt="Global Brew Chicago Daaaa Beers retail apparel" />
+          <div class="work-copy"><span class="project-type">LIFESTYLE DROP</span><h3>Global Brew — Chicago Daaaa Beers</h3><p>A playful local retail piece that shows how TAL can extend a brand beyond standard logo apparel.</p></div>
+        </article>
+      </div>
+      <p class="work-note">Real TAL project imagery shown with approved customer and team marks.</p>
+    </section>
 
-            <label>
-              <span>Estimated Quantity</span>
-              <select name="estimated_quantity">
-                <option value="" selected>Not sure yet</option>
-                <option>1–24 pieces</option>
-                <option>25–49 pieces</option>
-                <option>50–99 pieces</option>
-                <option>100–249 pieces</option>
-                <option>250–499 pieces</option>
-                <option>500+ pieces</option>
-              </select>
-            </label>
-          </div>
+<section class="from-lab-section" id="from-the-lab">
+    <div class="section-shell from-lab-shell">
+      <div class="from-lab-header">
+        <span class="eyebrow">FROM THE LAB</span>
+        <h2>Designed. Pressed.<br>Packed. Right here.</h2>
+        <p>Real orders. Real production. From one-off lifestyle pieces to full club and team runs, TAL handles the work locally from artwork through delivery.</p>
+      </div>
 
-          <div class="row">
-            <label>
-              <span>Target Date</span>
-              <input type="date" name="target_date">
-            </label>
+      <div class="from-lab-grid">
+        <figure class="from-lab-card from-lab-card-large">
+          <img src="assets/bills-mafia-production.jpg" alt="Bills Mafia transfer positioned on a blue shirt at the heat press">
+          <figcaption>
+            <span>01</span>
+            <strong>ON PRESS</strong>
+            <p>Artwork positioned, checked and ready for production.</p>
+          </figcaption>
+        </figure>
 
-            <label>
-              <span>Artwork / Logo</span>
-              <select name="artwork_status">
-                <option value="" selected>Select status</option>
-                <option>Artwork is ready</option>
-                <option>We have a logo, but need help preparing it</option>
-                <option>We need design help</option>
-                <option>Not sure yet</option>
-              </select>
-            </label>
-          </div>
+        <figure class="from-lab-card">
+          <img src="assets/scout-shirt-production.jpg" alt="Scout team shirt with transfer positioned for production">
+          <figcaption>
+            <span>02</span>
+            <strong>CLUB PRODUCTION</strong>
+            <p>Repeatable decoration for team and club programs.</p>
+          </figcaption>
+        </figure>
 
-          <label class="full">
-            <span>What are you looking to make?</span>
-            <input type="text" name="garment_needs" placeholder="Tees, hoodies, hats, performance shirts, fan gear store, etc.">
-          </label>
+        <figure class="from-lab-card">
+          <img src="assets/illinois-tigers-box.jpg" alt="Finished Illinois Tigers apparel packed in a shipping box">
+          <figcaption>
+            <span>03</span>
+            <strong>READY TO DELIVER</strong>
+            <p>Finished orders packed and ready to get in the hands of your people.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-          <label class="full">
-            <span>Tell us about the project *</span>
-            <textarea name="project_notes" required placeholder="What are you trying to accomplish? Include any product ideas, colors, quantities, timing or other details that would help us understand the project."></textarea>
-          </label>
+<section id="why-tal" class="section why-tal">
+      <div class="why-copy">
+        <p class="eyebrow">WHY TAL</p>
+        <h2>Local service without the small-shop limitations.</h2>
+        <p>TAL is being built to combine hands-on local service with disciplined production, smart sourcing and modern storefront options.</p>
+        <div class="metrics">
+          <div><strong>CURATED</strong><span>Product assortments that make sense.</span></div>
+          <div><strong>FLEXIBLE</strong><span>Bulk orders, stores and partner programs.</span></div>
+          <div><strong>RESPONSIVE</strong><span>A real person managing the project.</span></div>
+        </div>
+      </div>
+      <div class="why-visual">
+        <img src="assets/illinois-tigers-box.jpg" alt="Finished Illinois Tigers Baseball apparel order packed by TAL" />
+        <div class="manifesto compact">
+          <span>TAL / REAL ORDERS</span>
+          <h3>BUILT HERE.<br>EARNED EVERY DAY.</h3>
+          <p>From artwork approval to finished stacks, TAL manages the details that turn a design into a dependable apparel program.</p>
+          <div class="rule"></div>
+          <small>LOCAL PRODUCTION • ORGANIZED FULFILLMENT • HANDS-ON SERVICE</small>
+        </div>
+      </div>
+    </section>
 
-          <div class="art-note">
-            <strong>Have artwork ready?</strong>
-            <p>Submit the form first, then reply to the confirmation email with your logo or artwork files.</p>
-          </div>
-
-          <div class="submit-row">
-            <button type="submit">SEND PROJECT DETAILS →</button>
-            <p class="direct-email">Prefer email? <a href="mailto:ryan@talgear.com">ryan@talgear.com</a></p>
-          </div>
-        </form>
+<section id="contact" class="final-cta">
+      <div class="final-cta-copy">
+        <p class="eyebrow">START A PROJECT</p>
+        <h2>Bring us the idea.<br>We'll build the apparel plan.</h2>
+        <p>Team order, fan gear store, business apparel or something custom — start with the basics and TAL will help build the right approach.</p>
+      </div>
+      <div class="final-cta-action">
+        <a href="start-a-project/" class="btn btn-primary">Start a Project →</a>
+        <span>Prefer email? <a href="mailto:ryan@talgear.com">ryan@talgear.com</a></span>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="shell footer-inner">
-      <strong>TAL — TEAM APPAREL LAB</strong>
-      <span>CUSTOM APPAREL • FAN GEAR • LIFESTYLE</span>
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/tal-logo.png" alt="TAL" onerror="this.style.display='none'">
+      <div><strong>TEAM APPAREL LAB</strong><span>Custom Apparel • Fan Gear • Lifestyle</span></div>
     </div>
+    <div class="footer-right"><span>© 2026 TAL — TEAM APPAREL LAB</span><b>TALGEAR.COM</b></div>
   </footer>
 
   <script>
-    if (new URLSearchParams(window.location.search).get('submitted') === '1') {
-      const form = document.getElementById('project-form');
-      if (form) {
-        form.innerHTML = `
-          <div class="success">
-            <span class="eyebrow">PROJECT RECEIVED</span>
-            <h2>Thanks. We’ve got it.</h2>
-            <p>Your project details were submitted to TAL. We’ll review everything and follow up with the right next step.</p>
-            <a href="../">Back to talgear.com</a>
-          </div>
-        `;
-      }
-    }
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+    document.getElementById('project-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const org = document.getElementById('org').value.trim();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const type = document.getElementById('project-type').value;
+      const notes = document.getElementById('notes').value.trim();
+      const subject = encodeURIComponent(`TAL Project Inquiry — ${org}`);
+      const body = encodeURIComponent(`Organization / Business: ${org}\nName: ${name}\nEmail: ${email}\nProject Type: ${type}\n\nProject Notes:\n${notes || 'No additional notes provided.'}`);
+      window.location.href = `mailto:sales@talgear.com?subject=${subject}&body=${body}`;
+    });
   </script>
 </body>
 </html>
